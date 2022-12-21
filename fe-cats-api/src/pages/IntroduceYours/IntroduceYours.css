@@ -1,0 +1,36 @@
+.idy {
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    height: 3px;
+    border-radius: 3px;
+    background-color: white;
+    opacity: 0.65;
+}
+
+.idy-label {
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+}
+
+.idy-input {
+    align-items: center;
+}
+
+.idy-input input {
+    font-size: 16px;
+    padding: 0 12px;
+    border-radius: 5px;
+    transition: 0.5s ease;
+    opacity: 0.85;
+}
+
+.idy-input input:focus {
+    outline: 2px solid var(--main-brown);
+    color: var(--main-brown);
+    background-color: var(--main-dark);
+}

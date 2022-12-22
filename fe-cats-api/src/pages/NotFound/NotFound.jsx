@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 
 function NotFound() {
     useEffect(() => {
-        document.title='404 - MeCat';
+        document.title='Not Found - MeCat';
     }, []);
 
     return (

@@ -6,6 +6,12 @@ import './IntroduceYours.css'
 function IntroduceYours() {
   const navigate = useNavigate();
 
+  const env = {
+    base_url: import.meta.env.VITE_BASE_URL,
+    add_cat_uri: import.meta.env.VITE_ADDCAT_URI,
+  };
+  const addCatUrl = env.base_url + env.add_cat_uri;
+
   const notif = {
       emptyFieldMsg: 'All fields must be filled!',
       invalidAgeMsg: 'Age cannot be negative!',
@@ -40,7 +46,7 @@ function IntroduceYours() {
 
           // post method action
           try {
-              const response = await axios.post('https://cats-api-seven.vercel.app/add-cat', {
+              const response = await axios.post(addCatUrl, {
                 name: name,
                 age: age,
                 furcolor: furcolor,

@@ -6,9 +6,15 @@ function ExploreColony() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    const env = {
+        base_url: import.meta.env.VITE_BASE_URL,
+        get_cats_uri: import.meta.env.VITE_GETCATS_URI,
+    };
+    const getCatsUrl = env.base_url + env.get_cats_uri;
+
     const getCats = async () => {
         try {
-            const request = await axios.get('https://cats-api-seven.vercel.app/get-cats');
+            const request = await axios.get(getCatsUrl);
             const response = await request.data;
             const data = await response.data;
     

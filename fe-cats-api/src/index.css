@@ -6,6 +6,12 @@
   --main-brown: #C4A260;
   --main-dark: #262628;
   --secondary-dark: #3F3F3F;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
 @layer base {
@@ -25,5 +31,8 @@
   h2 {
     letter-spacing: 0.05em;
     font-size: 24px;
+  }
+  p {
+    line-height: 1.3;
   }
 }
